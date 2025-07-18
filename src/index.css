@@ -126,6 +126,10 @@
   transform: translateZ(0);
 }
 
+.rotate {
+  transform: rotate(360deg);
+}
+
 @keyframes mulShdSpin {
   0%,
   100% {

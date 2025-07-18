@@ -23,7 +23,7 @@ const Team = () => {
         return (
           <div key={cat.key} className="mb-12">
             <h3 className="text-2xl font-semibold mb-6">{cat.label}</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {members.map((member, idx) => (
                 <Tilt
                   key={member.name + idx}

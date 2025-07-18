@@ -4,10 +4,96 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import { motion } from "framer-motion";
+
+// Animated MobileNav component
+const links = [
+  { href: "/", name: "Home" },
+  { href: "/aboutus", name: "About us" },
+  { href: "/menu", name: "Menu" },
+  { href: "/contactus", name: "Contact us" }
+];
+
+const letterAnim = {
+  initial: { y: "100%", opacity: 0 },
+  enter: (i) => ({
+    y: 0,
+    opacity: 1,
+    transition: { duration: 1, ease: [0.60, 0, 0.20, 1], delay: i[0] },
+  }),
+  exit: (i) => ({
+    y: "100%",
+    opacity: 0,
+    transition: { duration: 0.8, ease: [0.60, 0, 0.20, 1], delay: i[1] },
+  }),
+};
+
+const getLetter = (name) => {
+  return name.split("").map((letter, index) => (
+    <motion.span
+      variants={letterAnim}
+      initial="initial"
+      animate="enter"
+      custom={[index * 0.04, (name.length - index) * 0.01]}
+      exit="exit"
+      key={index}
+    >
+      {letter}
+    </motion.span>
+  ));
+};
+
+const heightAnimation = {
+  initial: { height: 0 },
+  open: {
+    height: "85vh",
+    transition: { duration: 1, ease: [0.75, 0, 0.23, 1] }
+  },
+  closed: {
+    height: 0,
+    transition: { duration: 1, ease: [0.75, 0, 0.23, 1] }
+  }
+};
+
+const MobileNav = ({ isOpen, closeNav, navLinks, active, setActive }) => (
+  <motion.nav
+    variants={heightAnimation}
+    initial="initial"
+    animate={isOpen ? "open" : "closed"}
+    exit="closed"
+    className="bg-primary overflow-hidden fixed z-[50] top-0 left-0 w-full"
+  >
+    <div className="container mx-auto h-full flex items-center justify-center relative">
+      {/* Close button */}
+      <button
+        onClick={closeNav}
+        className="absolute top-4 right-4 z-50 p-2 rounded-full bg-black-100 hover:bg-black-200 transition-colors"
+        aria-label="Close menu"
+      >
+        <img src={close} alt="close" className="w-7 h-7 object-contain" />
+      </button>
+      <ul className="flex flex-col gap-8 font-primary text-4xl font-semibold text-accent items-center uppercase">
+        {navLinks.map((nav, index) => (
+          <Link
+            to={nav.path}
+            key={nav.id}
+            className={`flex overflow-hidden hover:text-white transition-all ${active === nav.title ? 'text-white' : ''}`}
+            onClick={() => {
+              setActive(nav.title);
+              closeNav();
+            }}
+          >
+            {getLetter(nav.title)}
+          </Link>
+        ))}
+      </ul>
+    </div>
+  </motion.nav>
+);
 
 const Navbar = () => {
   const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -49,6 +135,7 @@ const Navbar = () => {
           </p>
         </Link>
 
+        {/* Desktop Nav */}
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((nav) => (
             <li
@@ -63,37 +150,23 @@ const Navbar = () => {
           ))}
         </ul>
 
+        {/* Mobile Hamburger Icon */}
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img
-            src={toggle ? close : menu}
+            src={mobileNavOpen ? close : menu}
             alt='menu'
-            className='w-[28px] h-[28px] object-contain'
-            onClick={() => setToggle(!toggle)}
+            className='w-[28px] h-[28px] object-contain z-50 transition-transform duration-300 cursor-pointer'
+            onClick={() => setMobileNavOpen(!mobileNavOpen)}
           />
-
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
-          >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
-                >
-                  <Link to={nav.path}>{nav.title}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
+        {/* Animated Mobile Nav */}
+        <MobileNav 
+          isOpen={mobileNavOpen} 
+          closeNav={() => setMobileNavOpen(false)} 
+          navLinks={navLinks}
+          active={active}
+          setActive={setActive}
+        />
       </div>
     </nav>
   );

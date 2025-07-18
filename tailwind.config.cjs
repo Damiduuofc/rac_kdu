@@ -4,6 +4,9 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      rotate: {
+        '360': '360deg',
+      },
       colors: {
         primary: "#050816",
         secondary: "#aaa6c3",
