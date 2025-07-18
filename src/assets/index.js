@@ -1,6 +1,7 @@
 import logo from "./logo.png";
 import herophoto from "./Hero.jpeg";
 import hero2 from "./Hero2.jpeg";
+import hero3 from "./Hero3.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -63,4 +64,5 @@ export {
   tripguide,
   herophoto,
   hero2,
+  hero3
 };

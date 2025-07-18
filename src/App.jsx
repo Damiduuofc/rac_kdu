@@ -24,7 +24,7 @@ const App = () => {
               <Tech />
               <Works />
               <Feedbacks />
-              <Contact />
+
               <StarsCanvas />
             </>
           } />

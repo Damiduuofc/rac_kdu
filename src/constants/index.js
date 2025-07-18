@@ -31,7 +31,7 @@ import Kimuthu from "../assets/team_members/Rtr.Kimuthu.jpeg";
 import Sithija from "../assets/team_members/Rtr.Sithija.jpeg";
 import Thusara from "../assets/team_members/Rtr.Thusara.jpeg";
 import Damidu from "../assets/team_members/Rtr.Damidu.jpeg";
-import Thasuni from "../assets/team_members/Rtr.Thasuni.jpeg";
+import Thashuni from "../assets/team_members/Rtr.Thasuni.jpeg";
 import Beenu from "../assets/team_members/Rtr.Beenu.jpeg";
 import Lahiru from "../assets/team_members/Rtr.Lahiru.png";
 import Gamika from "../assets/team_members/Rtr.Gamika.jpeg";
@@ -210,191 +210,41 @@ export const testimonials = [
 ];
 
 export const teamMembers = [
-  {
-    name: "Rtr.Omalya",
-    position: "President",
-    photo: Omalya,
-    category: "executive"
-  },
-  {
-    name: "Rtr.Kimuthu ",
-    position: "Secretary",
-    photo: Kimuthu,
-    category: "executive"
-  },
-  {
-    name: "Rtr.Sithija",
-    position: "Secretary",
-    photo: Sithija,
-    category: "executive"
-  },
-  {
-    name: "Rtr.Asel",
-    position: "Vice President",
-    photo: Asel,
-    category: "executive"
-  },
-  {
-    name: "Rtr.Maljini",
-    position: "Assistant Secretary",
-    photo: Maljini,
-    category: "executive"
-  },
-  {
-    name: "Rtr.Thusara",
-    position: "Editors",
-    photo: Thusara,
-    category: "executive"
-  },
-  {
-    name: "Rtr.Damidu",
-    position: "Editors",
-    photo: Damidu,
-    category: "executive"
-  },
-  {
-    name: "Rtr.Thasuni",
-    position: "Editors",
-    photo: Thasuni,
-    category: "executive"
-  },
-  {
-    name: "Rtr.Beenu",
-    position: "Treasurers",
-    photo: Beenu,
-    category: "executive"
-  },
-  {
-    name: "Rtr.Lahiru",
-    position: "Treasurers",
-    photo: Lahiru,
-    category: "executive"
-  },
-  {
-    name: "Rtr. Gamika",
-    position: "Sergeant-at-Arms",
-    photo: Gamika,
-    category: "executive"
-  },
-  {
-    name: "Rtr. Jayadi Udara",
-    position: "IT Director",
-    photo: Jayadi,
-    category: "BOD"
-  },
-  {
-    name: "Rtr.Nipuni Wijenayaka",
-    position: "IT Director",
-    photo: Nipuni,
-    category: "BOD"
-  },
-  {
-    name: "Rtr.Thisara",
-    position: "IT director",
-    photo: Thisara,
-    category: "BOD"
-  },
-  {
-    name: "Rtr.Vishwani Yashodara",
-    position: "Finance Director",
-    photo: Vishwani,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Samudi Rathnayake",
-    position: "Finance Director",
-    photo: Samudi,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Nethmi Somathilaka",
-    position: "Membership Development Director",
-    photo: Nethmi,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Jithmi Perera",
-    position: "Membership Development Director",
-    photo: Jithmi,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Sachin",
-    position: "Public Relations Director",
-    photo: Sachin,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. H.A.T Thimaya",
-    position: "Public Relations Director",
-    photo:Thimaya,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Nethmi Kavindya",
-    position: "Professional Development Director",
-    photo: Nethmi1,
-    category: "BOD"
-  },
-  {
-    name: "Rtr.Sarasi",
-    position: "Professional Development Director",
-    photo: Sarasi,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Isuri Kulasinghe",
-    position: "Community Service Director",
-    photo: Isuri,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Imasha Jayasekara",
-    position: "Community Service Director",
-    photo: Imasha,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Raviru Ranawaka",
-    position: "Community Service Director",
-    photo: Raviru,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Delhi Chamindi",
-    position: "Club Service Director",
-    photo: Delhi,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Sandali Nirmani",
-    position: "Club Service Director",
-    photo: Sandali,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Sasi Tanisha",
-    position: "Peace and Reconciliation Director",
-    photo: Sasi,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Bhagya Dewmini",
-    position: "Sports Director",
-    photo: Bhagya,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Shanika Gimhani",
-    position: "Environment Director",
-    photo: Shanika,
-    category: "BOD"
-  },
-  {
-    name: "Rtr. Ganguli Heenatigala",
-    position: "Rotary Public Relations & International Service Director",
-    photo: Ganguli,
-    category: "BOD"
-  }
+
+    // Executive Members
+    { name: "Rtr. Omalya Athapattu", position: "President", photo: Omalya, category: "executive" },
+    { name: "Rtr. Asel Kumarage", position: "Vice President", photo: Asel, category: "executive" },
+    { name: "Rtr. Sithija Dassanayake", position: "Secretary", photo: Sithija, category: "executive" },
+    { name: "Rtr. Kimuthu Balasooriya", position: "Secretary", photo: Kimuthu, category: "executive" },
+    { name: "Rtr. Maljini", position: "Assistant Secretary", photo: Maljini, category: "executive" },
+    { name: "Rtr. Lahiru Senadheera", position: "Treasurer", photo: Lahiru, category: "executive" },
+    { name: "Rtr. Beenu Savindi", position: "Treasurer", photo: Beenu, category: "executive" },
+    { name: "Rtr. Gamika Sathyana", position: "Sergeant-at-Arms", photo: Gamika, category: "executive" },
+    { name: "Rtr. Thusara", position: "Editor", photo: Thusara, category: "executive" },
+    { name: "Rtr. Damidu Abeysinghe", position: "Editor", photo: Damidu, category: "executive" },
+    { name: "Rtr. Thashuni Gunarathne", position: "Editor", photo: Thashuni, category: "executive" },
   
-];
+    // BOD Members
+    { name: "Rtr. Jayadi Udara", position: "IT Director", photo: Jayadi, category: "BOD" },
+    { name: "Rtr. Nipuni Wijenayaka", position: "IT Director", photo: Nipuni, category: "BOD" },
+    { name: "Rtr. Thisara", position: "IT Director", photo: Thisara, category: "BOD" },
+    { name: "Rtr. Vishwani Yashodara", position: "Finance Director", photo: Vishwani, category: "BOD" },
+    { name: "Rtr. Samudi Rathnayake", position: "Finance Director", photo: Samudi, category: "BOD" },
+    { name: "Rtr. Nethmi Somathilaka", position: "Membership Development Director", photo: Nethmi, category: "BOD" },
+    { name: "Rtr. Jithmi Perera", position: "Membership Development Director", photo: Jithmi, category: "BOD" },
+    { name: "Rtr. Sachin", position: "Public Relations Director", photo: Sachin, category: "BOD" },
+    { name: "Rtr. Thimaya", position: "Public Relations Director", photo: Thimaya, category: "BOD" },
+    { name: "Rtr. Nethmi Kavindya", position: "Professional Development Director", photo: Nethmi1, category: "BOD" },
+    { name: "Rtr. Sarasi", position: "Professional Development Director", photo: Sarasi, category: "BOD" },
+    { name: "Rtr. Isuri Kulasinghe", position: "Community Service Director", photo: Isuri, category: "BOD" },
+    { name: "Rtr. Imasha Jayasekara", position: "Community Service Director", photo: Imasha, category: "BOD" },
+    { name: "Rtr. Raviru Ranawake", position: "Community Service Director", photo: Raviru, category: "BOD" },
+    { name: "Rtr. Delhi Chamindi", position: "Club Service Director", photo: Delhi, category: "BOD" },
+    { name: "Rtr. Sandali Nirmani", position: "Club Service Director", photo: Sandali, category: "BOD" },
+    { name: "Rtr. Sasi Tanisha", position: "Peace and Reconciliation Director", photo: Sasi, category: "BOD" },
+    { name: "Rtr. Bhagya Dewmini", position: "Sports Director", photo: Bhagya, category: "BOD" },
+    { name: "Rtr. Shanika Gimhani", position: "Environment Director", photo: Shanika, category: "BOD" },
+    { name: "Rtr. Ganguli Geenatigala", position: "Rotary Public Relations & International Service Director", photo: Ganguli, category: "BOD" }
+  ];
+  
+
